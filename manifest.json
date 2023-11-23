@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+  "name": "BestCodes Audio & Video Downloader",
+  "description": "This extension intercepts and downloads audio and video files.",
+  "version": "1.0",
+  "author": "BestCodes",
+  "icons": {
+    "16": "images/icon-small.png",
+    "32": "images/icon.png",
+    "48": "images/icon.png",
+    "128": "images/icon.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "downloads",
+    "<all_urls>",
+    "storage"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "sidebar_action": {
+    "default_icon": {
+      "19": "images/icon-small.png",
+      "38": "images/icon.png"
+    },
+    "default_title": "Media Downloader",
+    "default_panel": "panel.html"
+  }
+}

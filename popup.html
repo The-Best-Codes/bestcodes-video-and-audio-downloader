@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Your existing styles here... */
+      body {
+        min-width: 500px;
+        max-height: 500px;
+        overflow: scroll;
+        font-family: Arial, sans-serif;
+        background-image: linear-gradient(to left, #ffffff, #f0fff0);
+      }
+      .file-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px;
+        border-bottom: 1px solid #ddd;
+      }
+      button {
+        position: relative;
+        padding: 5px 10px;
+        margin: 10px;
+        border: none;
+        border-radius: 15px;
+        background-color: #4caf50;
+        color: #fff;
+        cursor: pointer;
+        transition: 0.25s ease;
+      }
+      button:hover {
+        background-color: #3c883e;
+      }
+      button:active {
+        background-color: #285a2a;
+      }
+      span {
+        max-width: 350px;
+        overflow-wrap: break-word;
+        max-height: 100px;
+        overflow: auto;
+      }
+      text {
+        color: black;
+        display: block;
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        display: none;
+      }
+      /*scrollbar*/
+      /* width */
+      ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: rgb(216, 216, 216);
+        border-radius: 15px;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #4caf50;
+        border-radius: 10px;
+        min-height: 10px;
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #46a149;
+      }
+      ::-webkit-scrollbar-corner {
+        display: none;
+      }
+    </style>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.5.0/jszip.min.js"></script>-->
+  </head>
+  <body>
+    <h1>Media Downloader</h1>
+    <h2>By Best_codes</h2>
+    <h2>Collected Files</h2>
+    <button
+      id="clear"
+      title="Delete all collected files from the download list"
+    >
+      Clear Files
+    </button>
+    <button
+      id="removeDuplicates"
+      title="Remove all duplicate files from the download list"
+    >
+      Remove Duplicates
+    </button>
+    <button id="refresh" title="Refresh the list of collected files">
+      Refresh List
+    </button>
+    <button id="downloadAll" title="Download all collected files as a ZIP file">
+      Download All
+    </button>
+    <div id="progress" style="margin: 10px"></div>
+    <div id="message"></div>
+    <div id="files"></div>
+    <script src="popup.js"></script>
+  </body>
+</html>

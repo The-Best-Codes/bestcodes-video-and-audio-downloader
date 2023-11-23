@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Your existing styles here... */
+      body {
+        min-width: 500px;
+        overflow: auto;
+        font-family: Arial, sans-serif;
+        background-image: linear-gradient(to left, #ffffff, #f0fff0);
+      }
+      .file-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px;
+        border-bottom: 1px solid #ddd;
+      }
+      button {
+        position: relative;
+        padding: 5px 10px;
+        margin: 10px;
+        border: none;
+        border-radius: 15px;
+        background-color: #4caf50;
+        color: #fff;
+        cursor: pointer;
+        transition: 0.25s ease;
+      }
+      button:hover {
+        background-color: #3c883e;
+      }
+      button:active {
+        background-color: #285a2a;
+      }
+      span {
+        overflow-wrap: break-word;
+        max-width: 350px;
+        max-height: 100px;
+        overflow: auto;
+        margin: 0px;
+      }
+      text {
+        display: none;
+      }
+      a {
+        color: #3c883e;
+        display: block;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+        transition: 0.25s ease;
+      }
+      a:visited {
+        color: #1e421f;
+      }
+      a:not(:visited):hover {
+        color: #4cafa7;
+      }
+      a:hover {
+        color: #46a149;
+      }
+      /*scrollbar*/
+      /* width */
+      ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: rgb(216, 216, 216);
+        border-radius: 15px;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #4caf50;
+        border-radius: 10px;
+        min-height: 10px;
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #46a149;
+      }
+      ::-webkit-scrollbar-corner {
+        display: none;
+      }
+    </style>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.5.0/jszip.min.js"></script>-->
+  </head>
+  <body>
+    <h1>Media Downloader</h1>
+    <a href="https://github.com/the-best-codes">By Best_codes</a>
+    <h2>Collected Files</h2>
+    <button
+      id="clear"
+      title="Delete all collected files from the download list"
+    >
+      Clear Files
+    </button>
+    <button
+      id="removeDuplicates"
+      title="Remove all duplicate files from the download list"
+    >
+      Remove Duplicates
+    </button>
+    <button id="refresh" title="Refresh the list of collected files">
+      Refresh List
+    </button>
+    <button id="downloadAll" title="Download all collected files as a ZIP file">
+      Download All
+    </button>
+    <div id="progress" style="margin: 10px"></div>
+    <div id="message"></div>
+    <div id="files"></div>
+    <script src="popup.js"></script>
+  </body>
+</html>
